@@ -11,7 +11,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -21,7 +20,7 @@ import java.util.List;
 public class GestorArchivos {
     private static final String ARCHIVO = "cursos.txt";
     private static final String ARCHIVO2 = "estudiantes.txt";
-    private static final String ARCHIVO3 = "estudiantes.txt";
+    private static final String ARCHIVO3 = "profesores.txt";
     public static List<Curso> cargarCursos() {
         List<Curso> cursos = new ArrayList<>();
         File archivo = new File(ARCHIVO);
@@ -43,7 +42,6 @@ public class GestorArchivos {
     public static void guardarCurso() {       
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(ARCHIVO))) {
             for (int r = 0; r<= Curso.listaDeCursos.size()-1;r++) {
-                
                 writer.write(Curso.listaDeCursos.get(r).nombreCurso + ";" +  Curso.listaDeCursos.get(r).codigoCurso + ";" + Curso.listaDeCursos.get(r).descripcionCurso + ";" + Curso.listaDeCursos.get(r).profesorAsignado + ";" + Curso.listaDeCursos.get(r).listaDeEstudiante);
                 writer.newLine();
             }

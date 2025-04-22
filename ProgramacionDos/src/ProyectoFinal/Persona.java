@@ -20,7 +20,6 @@ public abstract class Persona {
     public Persona(String nombre, String email){
         this.nombre = nombre;
         this.email = email;
-        
     }   
     public Persona(){}
     interface registroEstudiante{

@@ -15,10 +15,6 @@ public class Curso {
     public String descripcionCurso,codigoCurso,nombreCurso,profesorAsignado;
     public ArrayList<String> listaDeEstudiante = new ArrayList<>();
     
-    
-    
-    
-    
     public String getDescripcionCurso() {
         return descripcionCurso;
     }

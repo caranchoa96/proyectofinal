@@ -12,7 +12,6 @@ import java.util.ArrayList;
  */
 public class Profesor extends Persona implements Persona.registroProfesor {
     static ArrayList<Profesor> listaDeProfesores = new ArrayList<>();
-    
     public Profesor(String nombre, String email) {
         super(nombre, email);
     }
