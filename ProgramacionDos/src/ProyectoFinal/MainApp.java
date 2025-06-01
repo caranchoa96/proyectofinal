@@ -15,13 +15,11 @@ import java.util.List;
 public class MainApp{
     static int registro;
     public static void main(String[] args) {
-        int r = 0;
         List<Curso> cursosCargados = new ArrayList(GestorArchivos.cargarCursos());
-
-        for(Curso curso : cursosCargados){
-            BaseDatosSimulada.cursos.add(curso.nombreCurso);           
-            Curso.listaDeCursos.add(curso);
-            r=r+1;
+        
+        for(int r = 0; r < cursosCargados.size(); r++){
+            BaseDatosSimulada.cursos.add(cursosCargados.get(r).nombreCurso);
+            Curso.listaDeCursos.add(cursosCargados.get(r));
         }
 
         List<Estudiante> EstudiantesCargados = new ArrayList(GestorArchivos.cargarEstudiantes());

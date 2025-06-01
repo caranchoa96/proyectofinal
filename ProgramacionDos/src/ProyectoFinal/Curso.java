@@ -5,6 +5,7 @@
 package ProyectoFinal;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  *
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 public class Curso {
     public static ArrayList<Curso> listaDeCursos = new ArrayList<>();
     public String descripcionCurso,codigoCurso,nombreCurso,profesorAsignado;
-    public ArrayList<String> listaDeEstudiante = new ArrayList<>();
+    ArrayList<String> estudiantesCurso = new ArrayList<>();
     
     public String getDescripcionCurso() {
         return descripcionCurso;
@@ -32,18 +33,18 @@ public class Curso {
     }
 
 
-    Curso(String nombreCurso, String codigoCurso, String descripcionCurso, String profesorAsignado, String listaDeEstudiante){
-        this.nombreCurso = nombreCurso;
-        this.codigoCurso = codigoCurso;
-        this.descripcionCurso = descripcionCurso;
-        this.profesorAsignado = profesorAsignado;
-        this.listaDeEstudiante.add(listaDeEstudiante);
-    }
+
     Curso(String nombreCurso, String codigoCurso, String descripcionCurso, String profesorAsignado){
         this.nombreCurso = nombreCurso;
         this.codigoCurso = codigoCurso;
         this.descripcionCurso = descripcionCurso;
         this.profesorAsignado = profesorAsignado;
     }
-
+    Curso(String nombreCurso, String codigoCurso, String descripcionCurso, String profesorAsignado, ArrayList<String> listaDeEstudiante){
+        this.nombreCurso = nombreCurso;
+        this.codigoCurso = codigoCurso;
+        this.descripcionCurso = descripcionCurso;
+        this.profesorAsignado = profesorAsignado;
+        this.estudiantesCurso = listaDeEstudiante;
+    }
 }

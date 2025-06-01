@@ -127,16 +127,18 @@ public class MatricularCurso extends javax.swing.JPanel {
         String nombre = JOptionPane.showInputDialog("Cual es su nombre?");
         for(Estudiante estudiantes: Estudiante.listaDeEstudiantes){
             if(estudiantes.nombre.equals(nombre)){
-                Curso.listaDeCursos.get(indice).listaDeEstudiante.add(nombre);
+                Curso.listaDeCursos.get(indice).estudiantesCurso.add(nombre);
                 JOptionPane.showMessageDialog(null, "Curso matriculado exitosamente");
             }
         }
         GestorArchivos.guardarCurso();
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jList2ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList2ValueChanged
         int indice = jList2.getSelectedIndex();
-        jTextArea1.setText("Nombre: "+Curso.listaDeCursos.get(indice).nombreCurso+"\nCodigo del curso: "+ Curso.listaDeCursos.get(indice).codigoCurso + "\nDescripcion del curso: " + Curso.listaDeCursos.get(indice).descripcionCurso + "\nProfesor Asignado: "+ Curso.listaDeCursos.get(indice).profesorAsignado + "\nEstudiantes: " + Curso.listaDeCursos.get(indice).listaDeEstudiante);
+        System.out.println(Curso.listaDeCursos.get(indice).estudiantesCurso);
+        jTextArea1.setText("Nombre: "+Curso.listaDeCursos.get(indice).nombreCurso+"\nCodigo del curso: "+ Curso.listaDeCursos.get(indice).codigoCurso + "\nDescripcion del curso: " + Curso.listaDeCursos.get(indice).descripcionCurso + "\nProfesor Asignado: "+ Curso.listaDeCursos.get(indice).profesorAsignado + "\nEstudiantes: " + Curso.listaDeCursos.get(indice).estudiantesCurso);
     }//GEN-LAST:event_jList2ValueChanged
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

@@ -24,7 +24,7 @@ public class MostrarCurso extends javax.swing.JPanel {
             String codigo = Curso.listaDeCursos.get(i).codigoCurso;
             String descripcion = Curso.listaDeCursos.get(i).descripcionCurso;
             String profesor = Curso.listaDeCursos.get(i).profesorAsignado;
-            String estudiantes = Curso.listaDeCursos.get(i).listaDeEstudiante.toString();
+            String estudiantes = Curso.listaDeCursos.get(i).estudiantesCurso.toString();
             Object[] data = {nombre, codigo, descripcion, profesor, estudiantes};
             modeloCursos.addRow(data);
 
